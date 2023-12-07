@@ -58,28 +58,28 @@ public class CalendarStudy {
         int secondChange = changeNum(secondDayOfTheWeek);
         int thirdChange = changeNum(thirdDayOfTheWeek);
 
-        int sum=0;
-        int a=1, b=1, c=1;
+        int sum=0; // 각 월들 시작 위치를 위한 카운트
+        int firstCnt=1, secondCnt=1, thirdCnt=1; // 각 월들의 카운트
         int lineCnt = 0; // 줄 바꿈 카운트 및 해당 달력 출력
 
-        while(a+b+c <= (firstLastDay + secondLastDay + thirdLastDay +2)){ // 세 달의 일수 만큼만 반복 출력
+        while(firstCnt+secondCnt+thirdCnt <= (firstLastDay + secondLastDay + thirdLastDay +2)){ // 세 달의 일수 만큼만 반복 출력
             sum++;
-            if(lineCnt <= 6 && a <= firstLastDay && sum > firstChange){
-                System.out.print(String.format("%02d",a) + "\t");
-                a++;
+            if(lineCnt <= 6 && firstCnt <= firstLastDay && sum > firstChange){
+                System.out.print(String.format("%02d",firstCnt) + "\t");
+                firstCnt++;
                 lineCnt++;
-            } else if (lineCnt >= 10 && lineCnt <=16 && b <= secondLastDay && sum > (secondChange+10)) {
-                System.out.print(String.format("%02d",b) + "\t");
-                b++;
+            } else if (lineCnt >= 10 && lineCnt <=16 && secondCnt <= secondLastDay && sum > (secondChange+10)) {
+                System.out.print(String.format("%02d",secondCnt) + "\t");
+                secondCnt++;
                 lineCnt++;
-            } else if (lineCnt >= 20 && lineCnt <= 26 && c <= thirdLastDay && sum > (thirdChange+20)) {
-                System.out.print(String.format("%02d",c) + "\t");
-                c++;
+            } else if (lineCnt >= 20 && lineCnt <= 26 && thirdCnt <= thirdLastDay && sum > (thirdChange+20)) {
+                System.out.print(String.format("%02d",thirdCnt) + "\t");
+                thirdCnt++;
                 lineCnt++;
-            } else if (lineCnt == 27) {
+            } else if (lineCnt == 27) { // 마지막 칸 입력시 줄 바꿈
                 lineCnt = 0;
                 System.out.println();
-            } else{
+            } else{ // 중간 공백
                 System.out.print("\t");
                 lineCnt++;
             }
