@@ -1,4 +1,4 @@
-
+package basic1;
 
 abstract class Person{
     abstract void printInfo();
@@ -7,7 +7,7 @@ abstract class Person{
 class Student extends Person{
 
     public void printInfo(){
-        System.out.println("Student.printInfo");
+        System.out.println("basic1.Student.printInfo");
     }
 }
 

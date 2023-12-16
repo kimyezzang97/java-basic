@@ -1,3 +1,5 @@
+package basic1;
+
 import java.io.*;
 
 public class FileInputOutputStudy {

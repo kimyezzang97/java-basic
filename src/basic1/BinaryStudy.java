@@ -1,3 +1,5 @@
+package basic1;
+
 public class BinaryStudy {
     public static void main(String[] args) {
         int numBase2 = 0b1100; // 2진수 대입 방법
